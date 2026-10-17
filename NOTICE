@@ -1,0 +1,13 @@
+Populus
+Copyright 2026 Mohit Samant
+
+This product uses data from third parties:
+
+- GHS-POP R2023A population grids, European Commission, Joint Research Centre (JRC),
+  licensed under CC BY 4.0.
+- Natural Earth borders and populated places, public domain.
+- NASA VIIRS Black Marble night lights, served by NASA's Global Imagery Browse
+  Services (GIBS).
+
+Map imagery is provided by Apple Maps through MapKit and is not part of this repository.
+See the Credits section of README.md for full details.

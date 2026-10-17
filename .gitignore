@@ -1,0 +1,18 @@
+# Built products
+build/
+dist/
+DerivedData/
+
+# Xcode per-user state
+xcuserdata/
+*.xcuserstate
+
+# Data files are too big for git. Get them with Scripts/fetch_data.sh.
+Populus/Resources/Data/
+
+.DS_Store
+__pycache__/
+.venv/
+
+# Launch video output
+brag-output/

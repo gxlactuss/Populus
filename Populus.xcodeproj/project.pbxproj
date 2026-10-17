@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F614498FD7263A298128165 /* lobby.caf in Resources */ = {isa = PBXBuildFile; fileRef = AED426C9352963C7A28CDBEA /* lobby.caf */; };
+		1AA620B8CAB85033D9FAB104 /* RevealPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A948E8031B40F725E694D589 /* RevealPanel.swift */; };
+		21046C0D5A3CF8178738CAC5 /* PopulationGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F75EAA5BFC6CD7EB8EEA560 /* PopulationGrid.swift */; };
+		2554F7288D7EED4C860E033E /* good.caf in Resources */ = {isa = PBXBuildFile; fileRef = B42329192A459D3B891E8F07 /* good.caf */; };
+		27250BEAFA4620146626E00C /* round.caf in Resources */ = {isa = PBXBuildFile; fileRef = AC1FDBACE142091F7A870C0F /* round.caf */; };
+		30BA933B171417BDAF2125C5 /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A5EAB662DC3B5385CD466E /* Regions.swift */; };
+		3F7D4BC5559436B06419E2C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C82E526F297539AF8422D023 /* Assets.xcassets */; };
+		41201F7B36702FE9554BCB97 /* DensityLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B52599616E6ECB49687CAEF /* DensityLegend.swift */; };
+		4AF40C54C021ACE8B541A265 /* highscore.caf in Resources */ = {isa = PBXBuildFile; fileRef = 895A92D386B516D5FA0BA6E0 /* highscore.caf */; };
+		4D7EE6EDA2A5D476590AE500 /* TileOverlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4550856DC634CC2B480D04A4 /* TileOverlays.swift */; };
+		6361FE8C9749218F0CF9E0C9 /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7195DFE2CD3498326572EA9D /* Cities.swift */; };
+		72B8DAB41918BB889FCF79FB /* DrawingOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E130119EDCCFDB4E1A0D389 /* DrawingOverlayView.swift */; };
+		7F2074BDD9DA9A52F9B98FA5 /* ToolPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEC4748C9B3216543F53D52 /* ToolPalette.swift */; };
+		815E872D057DA720543716C0 /* PopulusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E748A0878548A2F2FAAEACA /* PopulusApp.swift */; };
+		84429062D06D2B4E75F5CBAA /* ShapeTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F86ED0D851D047841D8983D /* ShapeTools.swift */; };
+		877C26837C8A936EA85B2FE0 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D9944140E0683F41BD0276 /* Audio.swift */; };
+		8FFF45A6A23BB6DB860FFAF7 /* great.caf in Resources */ = {isa = PBXBuildFile; fileRef = CB934EF47E7F226AA36242E7 /* great.caf */; };
+		9C245E68A40AC0878091810F /* draw.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4EBE6822E78321B227C4A254 /* draw.caf */; };
+		A357D537593E8F4BB9E94AA9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B182F6AAB596930CB242295 /* LoadingView.swift */; };
+		A5E416633E4AA2E99E7D3644 /* PolygonRasterizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0057C52ABA3CCCFDB211B3 /* PolygonRasterizer.swift */; };
+		A946C8DC6F7165FB9BF6B0AF /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEF54CF8300C7B1E8DADFA3 /* MapView.swift */; };
+		B7A1C961C667C0D7BE7BFE9D /* PopulationGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99E396FBF5515B5BDDA5CFB /* PopulationGridTests.swift */; };
+		BF8CAFC91BCED3347C28C0A0 /* TargetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56256034F202EF4A0C27418 /* TargetCard.swift */; };
+		C6CEDC886DF436EE7A6683FC /* click.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E24B28C326BED21BD39321C /* click.caf */; };
+		CC106E755B094992CCAC7E4A /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF3E6B68D6569077C29AC10 /* GameState.swift */; };
+		CC31E0D39F0B32B76C0B6ECE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747A68FC21461807AE6813F /* ContentView.swift */; };
+		D3DD4AC9C9E8837258CAA536 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3DFC660687ADE8C0CF511A /* Format.swift */; };
+		D45E6ADB3A3A4DAE5F97E283 /* undo.caf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9C52B23F3545EE347FEE4C /* undo.caf */; };
+		D6D338FD87F448672023C914 /* bad.caf in Resources */ = {isa = PBXBuildFile; fileRef = ECE2F43AB146DDF0133B0F81 /* bad.caf */; };
+		E0BF347E791D341A8C746376 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 44B952B7D831A6532E51B09D /* Data */; };
+		E806D3285B568320BC414942 /* guess.caf in Resources */ = {isa = PBXBuildFile; fileRef = 03537350862B083E4719A5BC /* guess.caf */; };
+		F1E20D04DBCD89CC3A5F1C91 /* HistorySidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EF235B34935F2A8AAE80ED /* HistorySidebar.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B793C8C015CB0763FE72735F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E761215942BEB882AFDAB65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 710D6B0F53CB5B573EE371D6;
+			remoteInfo = Populus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03537350862B083E4719A5BC /* guess.caf */ = {isa = PBXFileReference; path = guess.caf; sourceTree = "<group>"; };
+		06D9944140E0683F41BD0276 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		0B182F6AAB596930CB242295 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0F75EAA5BFC6CD7EB8EEA560 /* PopulationGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationGrid.swift; sourceTree = "<group>"; };
+		0F9C52B23F3545EE347FEE4C /* undo.caf */ = {isa = PBXFileReference; path = undo.caf; sourceTree = "<group>"; };
+		107D733783360B4BC14FBBC1 /* PopulusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopulusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B52599616E6ECB49687CAEF /* DensityLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DensityLegend.swift; sourceTree = "<group>"; };
+		25A5EAB662DC3B5385CD466E /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
+		33EF235B34935F2A8AAE80ED /* HistorySidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySidebar.swift; sourceTree = "<group>"; };
+		3FEF54CF8300C7B1E8DADFA3 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		44B952B7D831A6532E51B09D /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Data; path = Populus/Resources/Data; sourceTree = SOURCE_ROOT; };
+		4550856DC634CC2B480D04A4 /* TileOverlays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileOverlays.swift; sourceTree = "<group>"; };
+		4E748A0878548A2F2FAAEACA /* PopulusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulusApp.swift; sourceTree = "<group>"; };
+		4EBE6822E78321B227C4A254 /* draw.caf */ = {isa = PBXFileReference; path = draw.caf; sourceTree = "<group>"; };
+		5747A68FC21461807AE6813F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5BAA252078F4BCE8F5C453BB /* Populus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Populus.entitlements; sourceTree = "<group>"; };
+		5F86ED0D851D047841D8983D /* ShapeTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeTools.swift; sourceTree = "<group>"; };
+		69ACC17972C4CC82A252D9DB /* Populus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Populus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0057C52ABA3CCCFDB211B3 /* PolygonRasterizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonRasterizer.swift; sourceTree = "<group>"; };
+		6E130119EDCCFDB4E1A0D389 /* DrawingOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingOverlayView.swift; sourceTree = "<group>"; };
+		7195DFE2CD3498326572EA9D /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
+		895A92D386B516D5FA0BA6E0 /* highscore.caf */ = {isa = PBXFileReference; path = highscore.caf; sourceTree = "<group>"; };
+		8D3DFC660687ADE8C0CF511A /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
+		8E24B28C326BED21BD39321C /* click.caf */ = {isa = PBXFileReference; path = click.caf; sourceTree = "<group>"; };
+		A948E8031B40F725E694D589 /* RevealPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealPanel.swift; sourceTree = "<group>"; };
+		A99E396FBF5515B5BDDA5CFB /* PopulationGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationGridTests.swift; sourceTree = "<group>"; };
+		AC1FDBACE142091F7A870C0F /* round.caf */ = {isa = PBXFileReference; path = round.caf; sourceTree = "<group>"; };
+		AED426C9352963C7A28CDBEA /* lobby.caf */ = {isa = PBXFileReference; path = lobby.caf; sourceTree = "<group>"; };
+		B42329192A459D3B891E8F07 /* good.caf */ = {isa = PBXFileReference; path = good.caf; sourceTree = "<group>"; };
+		C82E526F297539AF8422D023 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAF3E6B68D6569077C29AC10 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		CB934EF47E7F226AA36242E7 /* great.caf */ = {isa = PBXFileReference; path = great.caf; sourceTree = "<group>"; };
+		ECE2F43AB146DDF0133B0F81 /* bad.caf */ = {isa = PBXFileReference; path = bad.caf; sourceTree = "<group>"; };
+		F56256034F202EF4A0C27418 /* TargetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetCard.swift; sourceTree = "<group>"; };
+		FCEC4748C9B3216543F53D52 /* ToolPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolPalette.swift; sourceTree = "<group>"; };
+		FE9A8FD6C52BA9A26687892B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		033FC3267365C3EE0C5D1B8A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				06D9944140E0683F41BD0276 /* Audio.swift */,
+				8D3DFC660687ADE8C0CF511A /* Format.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		08A71FAE2CF373E1BDB2E9D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69ACC17972C4CC82A252D9DB /* Populus.app */,
+				107D733783360B4BC14FBBC1 /* PopulusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1928DBF3D1E15D3CFC74557A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAF3E6B68D6569077C29AC10 /* GameState.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3806062B32AF33710EE72099 = {
+			isa = PBXGroup;
+			children = (
+				44B952B7D831A6532E51B09D /* Data */,
+				A2977EC485D4F8958BE3513E /* Populus */,
+				C76CE0CCC1703536EB198093 /* PopulusTests */,
+				08A71FAE2CF373E1BDB2E9D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		387BBACF149F3E78DEED4BA4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7195DFE2CD3498326572EA9D /* Cities.swift */,
+				6E0057C52ABA3CCCFDB211B3 /* PolygonRasterizer.swift */,
+				0F75EAA5BFC6CD7EB8EEA560 /* PopulationGrid.swift */,
+				25A5EAB662DC3B5385CD466E /* Regions.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		781353FB6770271F067DFBEE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5747A68FC21461807AE6813F /* ContentView.swift */,
+				1B52599616E6ECB49687CAEF /* DensityLegend.swift */,
+				33EF235B34935F2A8AAE80ED /* HistorySidebar.swift */,
+				0B182F6AAB596930CB242295 /* LoadingView.swift */,
+				A948E8031B40F725E694D589 /* RevealPanel.swift */,
+				F56256034F202EF4A0C27418 /* TargetCard.swift */,
+				FCEC4748C9B3216543F53D52 /* ToolPalette.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		A1F99A0F8C87CC861CFEB8AC /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				ECE2F43AB146DDF0133B0F81 /* bad.caf */,
+				8E24B28C326BED21BD39321C /* click.caf */,
+				4EBE6822E78321B227C4A254 /* draw.caf */,
+				B42329192A459D3B891E8F07 /* good.caf */,
+				CB934EF47E7F226AA36242E7 /* great.caf */,
+				03537350862B083E4719A5BC /* guess.caf */,
+				895A92D386B516D5FA0BA6E0 /* highscore.caf */,
+				AED426C9352963C7A28CDBEA /* lobby.caf */,
+				AC1FDBACE142091F7A870C0F /* round.caf */,
+				0F9C52B23F3545EE347FEE4C /* undo.caf */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		A2977EC485D4F8958BE3513E /* Populus */ = {
+			isa = PBXGroup;
+			children = (
+				C82E526F297539AF8422D023 /* Assets.xcassets */,
+				FE9A8FD6C52BA9A26687892B /* Info.plist */,
+				5BAA252078F4BCE8F5C453BB /* Populus.entitlements */,
+				B5A5062F04987095F5D71CB0 /* App */,
+				387BBACF149F3E78DEED4BA4 /* Data */,
+				FC23AEEA926B5D42D5BADA69 /* Map */,
+				1928DBF3D1E15D3CFC74557A /* Model */,
+				E6596D83EC6A19804E8C5199 /* Resources */,
+				781353FB6770271F067DFBEE /* UI */,
+				033FC3267365C3EE0C5D1B8A /* Util */,
+			);
+			path = Populus;
+			sourceTree = "<group>";
+		};
+		B5A5062F04987095F5D71CB0 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4E748A0878548A2F2FAAEACA /* PopulusApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C76CE0CCC1703536EB198093 /* PopulusTests */ = {
+			isa = PBXGroup;
+			children = (
+				A99E396FBF5515B5BDDA5CFB /* PopulationGridTests.swift */,
+			);
+			path = PopulusTests;
+			sourceTree = "<group>";
+		};
+		E6596D83EC6A19804E8C5199 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1F99A0F8C87CC861CFEB8AC /* Audio */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FC23AEEA926B5D42D5BADA69 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6E130119EDCCFDB4E1A0D389 /* DrawingOverlayView.swift */,
+				3FEF54CF8300C7B1E8DADFA3 /* MapView.swift */,
+				5F86ED0D851D047841D8983D /* ShapeTools.swift */,
+				4550856DC634CC2B480D04A4 /* TileOverlays.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6C99C42EA27F987964E60468 /* PopulusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A092F14E4DD2A1D85B167918 /* Build configuration list for PBXNativeTarget "PopulusTests" */;
+			buildPhases = (
+				3E590EAC1C43B5A1B2308612 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				181DCFEF2A06AC1C37565340 /* PBXTargetDependency */,
+			);
+			name = PopulusTests;
+			packageProductDependencies = (
+			);
+			productName = PopulusTests;
+			productReference = 107D733783360B4BC14FBBC1 /* PopulusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		710D6B0F53CB5B573EE371D6 /* Populus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCD910D4EFA7EAFBC77FF901 /* Build configuration list for PBXNativeTarget "Populus" */;
+			buildPhases = (
+				D38C33BDAC8976220A7DB180 /* Sources */,
+				ADE6AF2D17D12B8665AEAE88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Populus;
+			packageProductDependencies = (
+			);
+			productName = Populus;
+			productReference = 69ACC17972C4CC82A252D9DB /* Populus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E761215942BEB882AFDAB65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					6C99C42EA27F987964E60468 = {
+						DevelopmentTeam = "";
+					};
+					710D6B0F53CB5B573EE371D6 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = 357EC512A24F3DC5C20584A9 /* Build configuration list for PBXProject "Populus" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 3806062B32AF33710EE72099;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 08A71FAE2CF373E1BDB2E9D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				710D6B0F53CB5B573EE371D6 /* Populus */,
+				6C99C42EA27F987964E60468 /* PopulusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADE6AF2D17D12B8665AEAE88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F7D4BC5559436B06419E2C7 /* Assets.xcassets in Resources */,
+				E0BF347E791D341A8C746376 /* Data in Resources */,
+				D6D338FD87F448672023C914 /* bad.caf in Resources */,
+				C6CEDC886DF436EE7A6683FC /* click.caf in Resources */,
+				9C245E68A40AC0878091810F /* draw.caf in Resources */,
+				2554F7288D7EED4C860E033E /* good.caf in Resources */,
+				8FFF45A6A23BB6DB860FFAF7 /* great.caf in Resources */,
+				E806D3285B568320BC414942 /* guess.caf in Resources */,
+				4AF40C54C021ACE8B541A265 /* highscore.caf in Resources */,
+				0F614498FD7263A298128165 /* lobby.caf in Resources */,
+				27250BEAFA4620146626E00C /* round.caf in Resources */,
+				D45E6ADB3A3A4DAE5F97E283 /* undo.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E590EAC1C43B5A1B2308612 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7A1C961C667C0D7BE7BFE9D /* PopulationGridTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D38C33BDAC8976220A7DB180 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				877C26837C8A936EA85B2FE0 /* Audio.swift in Sources */,
+				6361FE8C9749218F0CF9E0C9 /* Cities.swift in Sources */,
+				CC31E0D39F0B32B76C0B6ECE /* ContentView.swift in Sources */,
+				41201F7B36702FE9554BCB97 /* DensityLegend.swift in Sources */,
+				72B8DAB41918BB889FCF79FB /* DrawingOverlayView.swift in Sources */,
+				D3DD4AC9C9E8837258CAA536 /* Format.swift in Sources */,
+				CC106E755B094992CCAC7E4A /* GameState.swift in Sources */,
+				F1E20D04DBCD89CC3A5F1C91 /* HistorySidebar.swift in Sources */,
+				A357D537593E8F4BB9E94AA9 /* LoadingView.swift in Sources */,
+				A946C8DC6F7165FB9BF6B0AF /* MapView.swift in Sources */,
+				A5E416633E4AA2E99E7D3644 /* PolygonRasterizer.swift in Sources */,
+				21046C0D5A3CF8178738CAC5 /* PopulationGrid.swift in Sources */,
+				815E872D057DA720543716C0 /* PopulusApp.swift in Sources */,
+				30BA933B171417BDAF2125C5 /* Regions.swift in Sources */,
+				1AA620B8CAB85033D9FAB104 /* RevealPanel.swift in Sources */,
+				84429062D06D2B4E75F5CBAA /* ShapeTools.swift in Sources */,
+				BF8CAFC91BCED3347C28C0A0 /* TargetCard.swift in Sources */,
+				4D7EE6EDA2A5D476590AE500 /* TileOverlays.swift in Sources */,
+				7F2074BDD9DA9A52F9B98FA5 /* ToolPalette.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		181DCFEF2A06AC1C37565340 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 710D6B0F53CB5B573EE371D6 /* Populus */;
+			targetProxy = B793C8C015CB0763FE72735F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7274E3ADA00B6E5978F9EE18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		7AC60C5364D9032C799974AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohitsamant.PopulusTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Populus.app/Contents/MacOS/Populus";
+			};
+			name = Debug;
+		};
+		AB1EE5BAC93C193E9F791A2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Populus/Populus.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Populus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohitsamant.Populus;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C79289157225D8E8E259C09B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CC21CE1C244055560CA37183 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohitsamant.PopulusTests;
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Populus.app/Contents/MacOS/Populus";
+			};
+			name = Release;
+		};
+		F823F0D7FDF4E47105AD2678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Populus/Populus.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Populus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mohitsamant.Populus;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		357EC512A24F3DC5C20584A9 /* Build configuration list for PBXProject "Populus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7274E3ADA00B6E5978F9EE18 /* Debug */,
+				C79289157225D8E8E259C09B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A092F14E4DD2A1D85B167918 /* Build configuration list for PBXNativeTarget "PopulusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC60C5364D9032C799974AA /* Debug */,
+				CC21CE1C244055560CA37183 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CCD910D4EFA7EAFBC77FF901 /* Build configuration list for PBXNativeTarget "Populus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F823F0D7FDF4E47105AD2678 /* Debug */,
+				AB1EE5BAC93C193E9F791A2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6E761215942BEB882AFDAB65 /* Project object */;
+}

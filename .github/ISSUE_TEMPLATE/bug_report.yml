@@ -1,0 +1,33 @@
+name: Bug report
+description: Something is broken or looks wrong.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what did you see instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start a country round in Indonesia
+        2. Draw a circle around Jakarta
+        3. ...
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Drag images or a screen recording here if they help.
+  - type: input
+    id: version
+    attributes:
+      label: Populus version
+      description: Filled in for you when you use Help > Report an Issue in the app.
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
