@@ -43,20 +43,17 @@ Populus is free and not registered with Apple, so the first time you open it you
 3. Click **Privacy & Security** in the sidebar, then scroll down.
 4. Next to the message about Populus, click **Open Anyway**, then confirm with your password or Touch ID.
 
-You only have to do this once. After that, Populus opens like any other app, from your Applications folder or Launchpad.
-
-**Updating:** when a new version is out, Populus tells you on launch. Download the new `.dmg` and repeat Steps 1 to 3. If asked, choose **Replace**.
-
-<details>
-<summary>For advanced users</summary>
-
-There is also a `.zip` on the release page if you prefer it. Instead of Step 4, you can run this in Terminal:
+Or, instead of the steps above, open the **Terminal** app (search for "Terminal" with Cmd-Space), paste this command and press Return:
 
 ```sh
 xattr -dr com.apple.quarantine /Applications/Populus.app
 ```
 
-</details>
+You only have to do this once. After that, Populus opens like any other app, from your Applications folder or Launchpad.
+
+**Updating:** when a new version is out, Populus tells you on launch. Download the new `.dmg` and repeat Steps 1 to 3. If asked, choose **Replace**.
+
+There is also a `.zip` on the release page if you prefer it to the `.dmg`.
 
 ---
 
@@ -90,8 +87,9 @@ The data files are too big for git, so they are attached to the [`data-v1` relea
 | `build_regions.py` | Continent and country masks and borders |
 | `build_metros.py` | 100 m population grids for each city round |
 | `make_icon.swift` | The app icon |
+| `make_dmg_background.swift` | The background of the installer window |
 
-To make a release, run `Scripts/package_release.sh`. Upload the app `.dmg` and `.zip` in `dist/` to the version release, and `populus-data.zip` to `data-v1` if the data changed.
+To make a release, install [create-dmg](https://github.com/create-dmg/create-dmg) (`brew install create-dmg`) and run `Scripts/package_release.sh`. Upload the app `.dmg` and `.zip` in `dist/` to the version release, and `populus-data.zip` to `data-v1` if the data changed.
 
 ## Report a problem
 
