@@ -34,8 +34,9 @@ struct ContentView: View {
 
             HStack {
                 Spacer()
-                if state.phase == .revealed, let result = state.result {
+                if state.phase == .revealed, let result = state.result, let shape = state.shape {
                     RevealPanel(target: state.target, result: result, highScoreRank: state.highScoreRank,
+                                shape: shape, region: state.region, style: state.mapStyle,
                                 onNext: state.next, onRetry: state.retry)
                         .id(state.resultID)
                         .padding(.trailing, 20)
@@ -65,6 +66,12 @@ struct ContentView: View {
                     .frame(maxWidth: 420)
             }
 
+            if state.showTutorial && !state.showsSplash {
+                TutorialView { state.showTutorial = false }
+                    .transition(.opacity.combined(with: .scale(scale: 0.95)))
+                    .zIndex(1)
+            }
+
             if state.showsSplash {
                 SplashView()
                     .transition(.opacity)
@@ -72,6 +79,8 @@ struct ContentView: View {
             }
         }
         .animation(.easeInOut(duration: 0.7), value: state.showsSplash)
+        .animation(.spring(response: 0.45, dampingFraction: 0.85), value: state.showTutorial)
+        .task { UpdateChecker.shared.checkOnLaunch() }
         .animation(.spring(response: 0.55, dampingFraction: 0.85), value: state.phase)
         .animation(.easeInOut(duration: 0.35), value: state.densityVisible)
         .preferredColorScheme(state.mapStyle == .night ? .dark : nil)
@@ -81,6 +90,15 @@ struct ContentView: View {
         }
         .toolbar {
             ToolbarItemGroup(placement: .primaryAction) {
+                if let release = UpdateChecker.shared.available {
+                    Button {
+                        NSWorkspace.shared.open(release.htmlURL)
+                    } label: {
+                        Label("Update Available", systemImage: "arrow.down.circle.fill")
+                            .labelStyle(.titleAndIcon)
+                    }
+                    .help("Download Populus \(release.version ?? "")")
+                }
                 Button {
                     Audio.shared.musicOn.toggle()
                 } label: {

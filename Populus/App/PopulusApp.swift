@@ -12,6 +12,10 @@ struct PopulusApp: App {
         .defaultSize(width: 1400, height: 880)
         .windowToolbarStyle(.unified(showsTitle: true))
         .commands { GameCommands(state: state) }
+
+        Settings {
+            SettingsView(state: state)
+        }
     }
 }
 
@@ -21,8 +25,10 @@ struct GameCommands: Commands {
     var body: some Commands {
         CommandGroup(replacing: .appInfo) {
             Button("About Populus") { showAbout() }
+            Button("Check for Updates…") { UpdateChecker.shared.checkNow() }
         }
         CommandGroup(replacing: .help) {
+            Button("Show Tutorial") { state.showTutorial = true }
             Button("Report an Issue…") { NSWorkspace.shared.open(Links.newIssue) }
             Button("Populus on GitHub") { NSWorkspace.shared.open(Links.repo) }
         }
@@ -93,6 +99,7 @@ struct GameCommands: Commands {
 
 enum Links {
     static let repo = URL(string: "https://github.com/gxlactuss/Populus")!
+    static let releasesAPI = URL(string: "https://api.github.com/repos/gxlactuss/Populus/releases")!
 
     /// A new GitHub issue with the app and macOS versions already filled in.
     static var newIssue: URL {

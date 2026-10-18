@@ -12,6 +12,54 @@
 
 Populus is a macOS game. Each round gives you a target, like "enclose 7.5 million people in Indonesia". Draw a shape on the map, press Return, and see how close you got, based on real population data down to 100 m squares.
 
+<p align="center">
+  <a href="https://github.com/gxlactuss/Populus/releases/latest"><b>⬇️ Download Populus for Mac</b></a>
+</p>
+
+---
+
+## How to install (no technical knowledge needed)
+
+You need a Mac running **macOS 26 or later**. It works on both Apple Silicon and Intel Macs.
+
+**Step 1. Download the app**
+
+Go to the [latest release page](https://github.com/gxlactuss/Populus/releases/latest). Scroll down to the **Assets** section and click the file whose name ends in **`.dmg`** (for example `Populus-1.1.0.dmg`). It is about 250 MB, so it may take a minute.
+
+**Step 2. Open the file you downloaded**
+
+Open your **Downloads** folder and double-click the `.dmg` file. A window opens showing the Populus icon and an Applications folder.
+
+**Step 3. Install it**
+
+Drag the **Populus** icon onto the **Applications** folder in that window. Wait for it to finish copying, then close the window.
+
+**Step 4. Open it the first time**
+
+Populus is free and not registered with Apple, so the first time you open it your Mac will show a warning and refuse to open it. This is normal. To allow it:
+
+1. Open your **Applications** folder and double-click **Populus**. When the warning appears, click **Done** (or **OK**).
+2. Click the **Apple logo** at the top left of the screen and choose **System Settings**.
+3. Click **Privacy & Security** in the sidebar, then scroll down.
+4. Next to the message about Populus, click **Open Anyway**, then confirm with your password or Touch ID.
+
+You only have to do this once. After that, Populus opens like any other app, from your Applications folder or Launchpad.
+
+**Updating:** when a new version is out, Populus tells you on launch. Download the new `.dmg` and repeat Steps 1 to 3. If asked, choose **Replace**.
+
+<details>
+<summary>For advanced users</summary>
+
+There is also a `.zip` on the release page if you prefer it. Instead of Step 4, you can run this in Terminal:
+
+```sh
+xattr -dr com.apple.quarantine /Applications/Populus.app
+```
+
+</details>
+
+---
+
 ## How to play
 
 - Each round is one of: anywhere on Earth, a continent, a country, or a city. The map keeps you inside that area.
@@ -19,18 +67,8 @@ Populus is a macOS game. Each round gives you a target, like "enclose 7.5 millio
 - Press Return to guess. You get your total, how far off you were, and the biggest cities inside your shape.
 - After guessing, Cmd-Shift-D shows a population heatmap so you can see where people really live.
 - Cmd-D switches between day (satellite) and night (city lights) maps. Cmd-Y opens your history.
-
-## Download
-
-1. Download `Populus-x.y.z.dmg` from the [latest release](https://github.com/gxlactuss/Populus/releases/latest) and open it. (There is also a `.zip` if you prefer.)
-2. Drag `Populus.app` onto the Applications shortcut.
-3. The app is not signed with a paid Apple Developer ID, so macOS will block it the first time. Open it once, then go to System Settings > Privacy & Security and click "Open Anyway". Or run:
-
-   ```sh
-   xattr -dr com.apple.quarantine /Applications/Populus.app
-   ```
-
-Needs macOS 26 or later.
+- The share button in the results sends a picture of your shape and score, plus a line of text.
+- In Settings (Cmd-,) you can turn round types on or off, for example cities only, and set the music volume.
 
 ## Build from source
 
@@ -61,7 +99,7 @@ In the app, choose Help > Report an Issue. It opens a new GitHub issue with your
 
 ## Privacy
 
-Populus has no accounts, analytics or tracking. Your history stays on your Mac. The app only goes online to load Apple Maps and NASA's night lights images.
+Populus has no accounts, analytics or tracking. Your history stays on your Mac. The app only goes online to load Apple Maps and NASA's night lights images, and to check GitHub for a new release once per launch. You can turn the update check off in Settings.
 
 ## Credits
 
@@ -78,6 +116,7 @@ No code, art or data was taken from Headcount. Populus was written from scratch,
 - A population heatmap after each guess
 - Results that list the biggest cities inside your shape
 - A history of past rounds
+- Round types you can pick, a first-run tutorial and shareable result cards
 
 ### Data
 
@@ -85,6 +124,15 @@ No code, art or data was taken from Headcount. Populus was written from scratch,
 - **Borders and places:** [Natural Earth](https://www.naturalearthdata.com/) 1:10m Admin 0 Countries and Populated Places. Public domain. Made with Natural Earth.
 - **Night lights:** NASA VIIRS Black Marble. We acknowledge the use of imagery provided by services from NASA's Global Imagery Browse Services ([GIBS](https://www.earthdata.nasa.gov/gibs)), part of NASA's Earth Science Data and Information System (ESDIS).
 - **Map imagery:** Apple Maps, through MapKit. The map's Legal link has the details for Apple's data providers.
+
+### Music
+
+Background music by [Komiku](https://opengameart.org/users/loyalty-freak-music) (Loyalty Freak Music), released under [CC0](https://creativecommons.org/publicdomain/zero/1.0/). The tracks were loudness-matched and converted to AAC for the app.
+
+- [Chill Out Theme](https://opengameart.org/content/chill-out-theme), [Time](https://opengameart.org/content/time) and [Down the river](https://opengameart.org/content/down-the-river), from *It's time for adventure vol 2*
+- [Champ de tournesol](https://opengameart.org/content/champ-de-tournesol), from *It's time for adventure*
+- [Friends, 2018](https://opengameart.org/content/friends-2018), from *Tale on the Late*
+- Travel to the Horizon, Sunset on the beach and Quiet Saturday, from [*Poupi's incredible adventures!*](https://opengameart.org/content/poupis-incredible-adventures-full-album)
 
 ### Software
 

@@ -101,6 +101,21 @@ final class GameState {
         didSet { save(recentRegions, key: "recentRegions") }
     }
 
+    /// Round types the player has turned on in Settings. Changing it only affects rounds not yet started.
+    var allowedTypes: Set<RoundType> = Set(RoundType.allCases) {
+        didSet {
+            save(allowedTypes, key: "allowedTypes")
+            if let upcoming = upcomingRegion, !allowedTypes.contains(upcoming.type) {
+                upcomingRegion = Region.random(after: recentRegions, allowed: allowedTypes)
+            }
+        }
+    }
+
+    /// The first-run walkthrough, shown once after the splash.
+    var showTutorial = !UserDefaults.standard.bool(forKey: "seenTutorial") {
+        didSet { if !showTutorial { UserDefaults.standard.set(true, forKey: "seenTutorial") } }
+    }
+
     var showDensity = false {
         didSet { if showDensity != oldValue { Audio.shared.play(.click) } }
     }
@@ -124,7 +139,7 @@ final class GameState {
     var densityVisible: Bool { showDensity && densityAllowed }
     var canUndo: Bool { phase == .drawing && !undoStack.isEmpty }
     var canGuess: Bool { phase == .drawing && shape != nil && grid != nil }
-    var drawingEnabled: Bool { phase == .drawing && tool != .pan && !spaceHeld }
+    var drawingEnabled: Bool { phase == .drawing && tool != .pan && !spaceHeld && !showTutorial }
     var averageAccuracy: Double? { lifetimeGuesses > 0 ? lifetimeAccuracy / Double(lifetimeGuesses) : nil }
 
     init() {
@@ -145,6 +160,9 @@ final class GameState {
         }
         if let data = d.data(forKey: "recentRegions"), let r = try? JSONDecoder().decode([Region].self, from: data) {
             recentRegions = r
+        }
+        if let data = d.data(forKey: "allowedTypes"), let t = try? JSONDecoder().decode(Set<RoundType>.self, from: data), !t.isEmpty {
+            allowedTypes = t
         }
         startRound()
         Task { [weak self] in
@@ -287,13 +305,13 @@ final class GameState {
     }
 
     private func startRound() {
-        if let next = upcomingRegion, next != region {
+        if let next = upcomingRegion, next != region, allowedTypes.contains(next.type) {
             region = next
         } else {
-            region = Region.random(after: recentRegions + [region])
+            region = Region.random(after: recentRegions + [region], allowed: allowedTypes)
         }
         recentRegions = Array((recentRegions + [region]).suffix(Region.repeatGap))
-        upcomingRegion = Region.random(after: recentRegions)
+        upcomingRegion = Region.random(after: recentRegions, allowed: allowedTypes)
         focus = FocusRequest(target: region == .world ? .world : .region(region))
         target = Self.randomTarget(in: targetRange, avoiding: target)
     }

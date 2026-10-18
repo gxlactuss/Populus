@@ -203,6 +203,20 @@ final class Metros: @unchecked Sendable {
     }
 }
 
+/// The kinds of round a player can turn on or off in Settings.
+enum RoundType: String, CaseIterable, Codable, Sendable {
+    case world, continent, country, city
+
+    var title: String {
+        switch self {
+        case .world: "World"
+        case .continent: "Continents"
+        case .country: "Countries"
+        case .city: "Cities"
+        }
+    }
+}
+
 /// What a round is locked to.
 enum Region: Hashable, Codable, Sendable {
     case world
@@ -225,6 +239,15 @@ enum Region: Hashable, Codable, Sendable {
         case .world: "Anywhere on Earth"
         case .continent, .country: "in \(name)"
         case .city(let id): "in \(name), \(Metros.shared?.entry(id)?.country ?? "")"
+        }
+    }
+
+    var type: RoundType {
+        switch self {
+        case .world: .world
+        case .continent: .continent
+        case .country: .country
+        case .city: .city
         }
     }
 
@@ -304,9 +327,9 @@ enum Region: Hashable, Codable, Sendable {
     /// How many rounds a country or city sits out after it's played.
     static let repeatGap = 30
 
-    /// World 25%, continents 25%, countries 37.5%, cities 12.5%. Never repeats the previous region, and
-    /// countries and cities never come back while they're in `recent` (oldest first, most recent last).
-    static func random(after recent: [Region]) -> Region {
+    /// World 25%, continents 25%, countries 37.5%, cities 12.5%, among the `allowed` types. Never repeats the
+    /// previous region, and countries and cities never come back while they're in `recent` (oldest first, most recent last).
+    static func random(after recent: [Region], allowed: Set<RoundType> = Set(RoundType.allCases)) -> Region {
         let countries = RegionMask.countries?.entries.map { Region.country($0.id) } ?? []
         let cities = Metros.shared?.entries.map { Region.city($0.id) } ?? []
         let pools: [(Double, [Region])] = [
@@ -314,7 +337,7 @@ enum Region: Hashable, Codable, Sendable {
             (0.2, Continent.allCases.map(Region.continent)),
             (0.3, countries),
             (0.1, cities),
-        ].filter { !$0.1.isEmpty }
+        ].filter { !$0.1.isEmpty && $0.1.first.map { allowed.contains($0.type) } == true }
         for _ in 0..<20 {
             var roll = Double.random(in: 0..<pools.map(\.0).reduce(0, +))
             let pool = pools.first { roll -= $0.0; return roll < 0 } ?? pools[0]
@@ -324,6 +347,6 @@ enum Region: Hashable, Codable, Sendable {
             case .world, .continent: if pick != recent.last { return pick }
             }
         }
-        return .world
+        return pools.first?.1.randomElement() ?? .world
     }
 }

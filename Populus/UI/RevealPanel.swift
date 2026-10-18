@@ -5,6 +5,9 @@ struct RevealPanel: View {
     let result: RoundResult
     /// Place in the all-time best guesses, if it made the list.
     let highScoreRank: Int?
+    let shape: [GeoPoint]
+    let region: Region
+    let style: MapStyle
     let onNext: () -> Void
     let onRetry: () -> Void
 
@@ -12,6 +15,7 @@ struct RevealPanel: View {
     @State private var needle: Double = 0
     @State private var showVerdict = false
     @State private var showDetails = false
+    @State private var shareFile: URL?
 
     private var total: Double { result.population.total }
     private var ratio: Double { total / target }
@@ -97,6 +101,7 @@ struct RevealPanel: View {
             HStack {
                 Button("Try again", systemImage: "arrow.counterclockwise", action: onRetry)
                     .buttonStyle(.glass)
+                shareButton
                 Spacer()
                 Button(action: onNext) {
                     Label("Next round", systemImage: "arrow.right")
@@ -110,6 +115,31 @@ struct RevealPanel: View {
         .frame(width: 340)
         .glassEffect(.regular, in: .rect(cornerRadius: 28))
         .onAppear(perform: animateIn)
+        .task { await makeShareFile() }
+    }
+
+    @ViewBuilder private var shareButton: some View {
+        if let shareFile {
+            ShareLink(item: shareFile, message: Text(ShareCard.text(target: target, total: total, region: region))) {
+                Image(systemName: "square.and.arrow.up")
+            }
+            .buttonStyle(.glass)
+            .help("Share this result")
+        } else {
+            ProgressView()
+                .controlSize(.small)
+                .frame(width: 36)
+        }
+    }
+
+    /// Writes the share picture to a temporary PNG, so every share target (Save, Copy, Messages…) can take it.
+    private func makeShareFile() async {
+        guard let image = await ShareCard.image(shape: shape, target: target, total: total, region: region, style: style),
+              let tiff = image.tiffRepresentation,
+              let png = NSBitmapImageRep(data: tiff)?.representation(using: .png, properties: [:]) else { return }
+        let url = FileManager.default.temporaryDirectory.appending(path: "Populus result.png")
+        guard (try? png.write(to: url)) != nil else { return }
+        shareFile = url
     }
 
     private func animateIn() {
